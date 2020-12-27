@@ -9,13 +9,8 @@ public class GameManager : MonoBehaviour
 	public float levelStartDelay = 2f; 
 	public float turnDelay = 0.1f; 
 	public int playerFoodPoints = 100;
-
-	public static GameManager
-		instance = null;
-
-	[HideInInspector]
-	public bool playersTurn = true; 
-
+    public static GameManager instance = null;
+	[HideInInspector] public bool playersTurn = true;
 
 	private Text levelText; 
 	private GameObject levelImage; 
@@ -24,8 +19,7 @@ public class GameManager : MonoBehaviour
 	private List<Enemy> enemies; 
 	private bool enemiesMoving; 
 
-	private bool
-		doingSetup = true; 
+	private bool doingSetup = true;
 
 
 
@@ -41,7 +35,7 @@ public class GameManager : MonoBehaviour
 		
 		else if (instance != this)
 
-			
+			Destroy(gameObject);
 
 		
 		DontDestroyOnLoad(gameObject);
@@ -51,24 +45,28 @@ public class GameManager : MonoBehaviour
 
 		
 		boardScript = GetComponent<BoardManager>();
-
 		
-		InitGame();
+		
 	}
 
-	
+	 [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
 	static public void CallbackInitialization()
 	{
-		
 		SceneManager.sceneLoaded += OnSceneLoaded;
+	    
+	    instance.InitGame();
 	}
-
 	
-	static private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
-	{
-		instance.level++;
-		instance.InitGame();
-	}
+	 static private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
+        { 
+	   
+            instance.level++;
+       
+    
+            instance.InitGame();
+           
+
+        }
 
 
 	
@@ -89,7 +87,7 @@ public class GameManager : MonoBehaviour
 		
 		levelImage.SetActive(true);
 
-		
+	
 		Invoke("HideLevelImage", levelStartDelay);
 
 	
@@ -97,7 +95,7 @@ public class GameManager : MonoBehaviour
 
 		
 		boardScript.SetupScene(level);
-
+		
 	}
 
 
@@ -135,8 +133,9 @@ public class GameManager : MonoBehaviour
 	public void GameOver()
 	{
 	
+	
 		levelText.text = "After " + level + " days, you starved.";
-
+        
 		
 		levelImage.SetActive(true);
 

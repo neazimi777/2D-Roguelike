@@ -234,19 +234,21 @@ public class Player : MovingObject
 		
 		
 		
-		private void CheckIfGameOver ()
-		{
+private void CheckIfGameOver ()
+
+{
 		
-			if (food <= 0) 
-			{
+	if (food <= 0) 
+	{
 				
-				SoundManager.instance.PlaySingle (gameOverSound);
+	 SoundManager.instance.PlaySingle (gameOverSound);
 				
 			
-				SoundManager.instance.musicSource.Stop();
+		SoundManager.instance.musicSource.Stop();
 			
-				GameManager.instance.GameOver ();
-			}
-		}
-	
+		GameManager.instance.GameOver ();
+	}
 }
+}
+	
+

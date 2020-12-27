@@ -4,88 +4,88 @@ using UnityEngine;
 
 public class Enemy : MovingObject
 {
-    	public int playerDamage; 						
-		public AudioClip attackSound1;						
-		public AudioClip attackSound2;						
+    public int playerDamage; 						
+    public AudioClip attackSound1;						
+    public AudioClip attackSound2;						
 		
 		
-		private Animator animator;							
-		private Transform target;						
-		private bool skipMove;							
-		
-		
-		
-		protected override void Start ()
-		{
-			
-			GameManager.instance.AddEnemyToList (this);
-			
-			
-			animator = GetComponent<Animator> ();
-			
-			
-			target = GameObject.FindGameObjectWithTag ("Player").transform;
-			
-			
-			base.Start ();
-		}
+    private Animator animator;							
+    private Transform target;						
+    private bool skipMove;							
 		
 		
 		
-		protected override void AttemptMove <T> (int xDir, int yDir)
-		{
+    protected override void Start ()
+    {
 			
-			if(skipMove)
-			{
-				skipMove = false;
-				return;
+        GameManager.instance.AddEnemyToList (this);
+			
+			
+        animator = GetComponent<Animator> ();
+			
+			
+        target = GameObject.FindGameObjectWithTag ("Player").transform;
+			
+			
+        base.Start ();
+    }
+		
+		
+		
+    protected override void AttemptMove <T> (int xDir, int yDir)
+    {
+			
+        if(skipMove)
+        {
+            skipMove = false;
+            return;
 				
-			}
+        }
 			
 		
-			base.AttemptMove <T> (xDir, yDir);
+        base.AttemptMove <T> (xDir, yDir);
 			
 			
-			skipMove = true;
-		}
+        skipMove = true;
+    }
 		
 		
 		
-		public void MoveEnemy ()
-		{
+    public void MoveEnemy ()
+    {
 			
-			int xDir = 0;
-			int yDir = 0;
+        int xDir = 0;
+        int yDir = 0;
 			
 			
-			if(Mathf.Abs (target.position.x - transform.position.x) < float.Epsilon)
+        if(Mathf.Abs (target.position.x - transform.position.x) < float.Epsilon)
 				
 		
-				yDir = target.position.y > transform.position.y ? 1 : -1;
+            yDir = target.position.y > transform.position.y ? 1 : -1;
 			
 		
-			else
+        else
 				
-				xDir = target.position.x > transform.position.x ? 1 : -1;
+            xDir = target.position.x > transform.position.x ? 1 : -1;
 			
 			
-			AttemptMove <Player> (xDir, yDir);
-		}
+        AttemptMove <Player> (xDir, yDir);
+    }
 		
 		
 		
-		protected override void OnCantMove <T> (T component)
-		{
+    protected override void OnCantMove <T> (T component)
+    {
 			
-			Player hitPlayer = component as Player;
-			
-			
-			hitPlayer.LoseFood (playerDamage);
+        Player hitPlayer = component as Player;
 			
 			
-			animator.SetTrigger ("enemyAttack");
+        hitPlayer.LoseFood (playerDamage);
 			
 			
-			SoundManager.instance.RandomizeSfx (attackSound1, attackSound2);
-}
+        animator.SetTrigger ("enemyAttack");
+			
+			
+        SoundManager.instance.RandomizeSfx (attackSound1, attackSound2);
+    }
 }
