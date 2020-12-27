@@ -11,18 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be05a168-2bfb-42ec-acf1-104f997d8c3a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Prefabs/Player.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Player.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Scenes/main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Enemy2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Enemy2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.script.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.script.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BoardManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Loader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Loader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovingObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MovingObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Wall.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +96,7 @@
       <workItem from="1608882022892" duration="14529000" />
       <workItem from="1608986599437" duration="9280000" />
       <workItem from="1609051687726" duration="700000" />
+      <workItem from="1609065434576" duration="495000" />
     </task>
     <servers />
   </component>
