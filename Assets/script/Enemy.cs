@@ -11,7 +11,7 @@ public class Enemy : MovingObject
 		
     private Animator animator;							
     private Transform target;						
-    private bool skipMove;							
+    public static bool skipMove;							
 		
 		
 		
@@ -36,23 +36,25 @@ public class Enemy : MovingObject
     {
 			
         if(skipMove)
-        {
+        { 
+          
             skipMove = false;
+          // Debug.Log("skipMove"+skipMove);
             return;
 				
         }
 			
 		
-        base.AttemptMove <T> (xDir, yDir);
-			
-			
+        base.AttemptMove <T> (xDir, yDir);	
         skipMove = true;
+   // Debug.Log("skipMove"+skipMove);
     }
 		
 		
 		
     public void MoveEnemy ()
     {
+       
 			
         int xDir = 0;
         int yDir = 0;
@@ -76,7 +78,7 @@ public class Enemy : MovingObject
 		
     protected override void OnCantMove <T> (T component)
     {
-			
+		
         Player hitPlayer = component as Player;
 			
 			

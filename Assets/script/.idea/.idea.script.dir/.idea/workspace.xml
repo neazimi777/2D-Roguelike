@@ -11,8 +11,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be05a168-2bfb-42ec-acf1-104f997d8c3a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Prefabs/Enemy2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Enemy2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/OuterWall1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/OuterWall1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/OuterWall2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/OuterWall2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/OuterWall3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/OuterWall3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Soda.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Soda.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Wall1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Wall1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Wall2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Wall2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Wall3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Wall3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Wall4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Wall4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Wall5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Wall5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Wall6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Wall6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Wall7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Wall7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Wall8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Wall8.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.script.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.script.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.script.dir/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.script.dir/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.script.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.script.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BoardManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,44 +41,41 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../../Game/Scripts/BoardManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../Game/Scripts/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Wall.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../New Unity Project (1)/Assets/NewBehaviourScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MovingObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Loader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../TutorialInfo/Scripts/TutorialInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../Game/Scripts/Wall.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../Game/Scripts/Loader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../Game/Scripts/MovingObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../Game/Scripts/SoundManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../Game/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../Game/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BoardManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../John Lemon’s Haunted Jaunt/John-Lemon-s-Haunted-Jaunt/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../John Lemon’s Haunted Jaunt/John-Lemon-s-Haunted-Jaunt/Assets/Scripts/WaypointPatrol.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../John Lemon’s Haunted Jaunt/John-Lemon-s-Haunted-Jaunt/Assets/Scripts/Observer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../John Lemon’s Haunted Jaunt/John-Lemon-s-Haunted-Jaunt/Assets/Scripts/LightFlicker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../John Lemon’s Haunted Jaunt/John-Lemon-s-Haunted-Jaunt/Assets/Scripts/KillingEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BoardManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../John Lemon’s Haunted Jaunt/John-Lemon-s-Haunted-Jaunt/Assets/Scripts/Shooter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../John Lemon’s Haunted Jaunt/John-Lemon-s-Haunted-Jaunt/Assets/Scripts/GameEnding.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Wall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Game/Scripts/SoundManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Game/Scripts/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MovingObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TutorialInfo/Scripts/TutorialInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Game/Scripts/Loader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Game/Scripts/Wall.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Game/Scripts/BoardManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Game/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RandomWall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../New Unity Project (1)/Assets/NewBehaviourScript.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/player.cs" />
-        <option value="$PROJECT_DIR$/soundManager.cs" />
-        <option value="$PROJECT_DIR$/wall.cs" />
-        <option value="$PROJECT_DIR$/../../../Game/Scripts/MovingObject.cs" />
-        <option value="$PROJECT_DIR$/../../../Game/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/../../../New Unity Project (1)/Assets/NewBehaviourScript.cs" />
-        <option value="$PROJECT_DIR$/SoundManager.cs" />
-        <option value="$PROJECT_DIR$/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Wall.cs" />
-        <option value="$PROJECT_DIR$/MovingObject.cs" />
-        <option value="$PROJECT_DIR$/Loader.cs" />
-        <option value="$PROJECT_DIR$/Player.cs" />
-        <option value="$PROJECT_DIR$/BoardManager.cs" />
-        <option value="$PROJECT_DIR$/GameManager.cs" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/../../../John Lemon’s Haunted Jaunt/John-Lemon-s-Haunted-Jaunt/Assets/Scripts/Observer.cs" />
+      <option value="$PROJECT_DIR$/BoardManager.cs" />
+      <option value="$PROJECT_DIR$/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Enemy.cs" />
+      <option value="$PROJECT_DIR$/RandomWall.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1lq0LJELbmftyMobQJudkI4S3Kp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -73,6 +88,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -97,6 +113,27 @@
       <workItem from="1608986599437" duration="9280000" />
       <workItem from="1609051687726" duration="700000" />
       <workItem from="1609065434576" duration="495000" />
+      <workItem from="1609163028620" duration="1645000" />
+      <workItem from="1609174679648" duration="598000" />
+      <workItem from="1609242044134" duration="637000" />
+      <workItem from="1609245199085" duration="1778000" />
+      <workItem from="1609247033423" duration="1756000" />
+      <workItem from="1609248914116" duration="1031000" />
+      <workItem from="1609251075337" duration="1223000" />
+      <workItem from="1609264468797" duration="2095000" />
+      <workItem from="1609266613357" duration="1381000" />
+      <workItem from="1609312017779" duration="737000" />
+      <workItem from="1609315981459" duration="15753000" />
+      <workItem from="1609332144187" duration="1245000" />
+      <workItem from="1609335453795" duration="51000" />
+      <workItem from="1609341325871" duration="13000" />
+      <workItem from="1609344562402" duration="96000" />
+      <workItem from="1609344761501" duration="4215000" />
+      <workItem from="1609398485202" duration="20935000" />
+      <workItem from="1609480795327" duration="3839000" />
+      <workItem from="1609658679377" duration="595000" />
+      <workItem from="1609659692831" duration="9224000" />
+      <workItem from="1609742397675" duration="8788000" />
     </task>
     <servers />
   </component>
@@ -119,31 +156,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="30" y="13" width="1477" height="811" key="dock-window-1" timestamp="1608989724195">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="30" y="13" width="1477" height="811" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1608989724195" />
-    <state x="568" y="145" width="718" height="811" key="dock-window-2" timestamp="1608832728721">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="568" y="145" width="718" height="811" key="dock-window-2/0.0.1536.824@0.0.1536.824" timestamp="1608832728721" />
-    <state x="828" y="38" width="738" height="803" key="dock-window-3" timestamp="1608560470756">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="828" y="38" width="738" height="803" key="dock-window-3/0.0.1536.824@0.0.1536.824" timestamp="1608560470756" />
-    <state x="796" y="0" width="738" height="830" key="dock-window-4" timestamp="1608560470756">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="796" y="0" width="738" height="830" key="dock-window-4/0.0.1536.824@0.0.1536.824" timestamp="1608560470756" />
-    <state x="790" y="14" width="738" height="803" key="dock-window-5" timestamp="1608561338004">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="790" y="14" width="738" height="803" key="dock-window-5/0.0.1536.824@0.0.1536.824" timestamp="1608561338004" />
-    <state x="801" y="0" width="674" height="811" key="dock-window-6" timestamp="1608575171324">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="801" y="0" width="674" height="811" key="dock-window-6/0.0.1536.824@0.0.1536.824" timestamp="1608575171324" />
   </component>
 </project>

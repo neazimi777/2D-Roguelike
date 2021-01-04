@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using System.Collections.Generic;		
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.UI;	
 
 public class GameManager : MonoBehaviour
@@ -11,7 +12,8 @@ public class GameManager : MonoBehaviour
 	public int playerFoodPoints = 100;
     public static GameManager instance = null;
 	[HideInInspector] public bool playersTurn = true;
-
+	
+	public static GameObject[] currentObj;
 	private Text levelText; 
 	private GameObject levelImage; 
 	private BoardManager boardScript; 
@@ -96,6 +98,8 @@ public class GameManager : MonoBehaviour
 		
 		boardScript.SetupScene(level);
 		
+		currentObj = FindGameObjectsWithTags(new string[] {"Soda","wall","Food","Enemy","Exit"});
+		
 	}
 
 
@@ -171,5 +175,19 @@ public class GameManager : MonoBehaviour
 
 	
 		enemiesMoving = false;
+	}
+	
+	
+
+       
+	GameObject[] FindGameObjectsWithTags(params string[] tags)
+	{
+		var all = new List<GameObject>();
+
+		foreach(string tag in tags)
+		{
+			all.AddRange(GameObject.FindGameObjectsWithTag(tag).ToList());
+		}
+		return all.ToArray();
 	}
 }
