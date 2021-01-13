@@ -1,36 +1,52 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random; 
 
 public class RandomWall : MonoBehaviour
 {
   bool IsPlayerInRange = true;
-  Vector3  m_playerPosition;
+  Vector3  currentPlayerPosition;
+  Vector3  lastPlayerPOsition ;
+
  
 void Update() 
 {
- 
+        currentPlayerPosition = transform.position;
+   
+    if(Mathf.Round(currentPlayerPosition.y) != Mathf.Round(lastPlayerPOsition.y))
+   {
+        SetWall();
+   }
 
- m_playerPosition = transform.position;
-  ComparePosition(m_playerPosition, GameManager.currentObj);
- GameObject wall = choiceWall();
- 
-MakeWallFromCompareTime( wall ,m_playerPosition);
- 
+   lastPlayerPOsition = currentPlayerPosition;
+    
 }
 
 
-void MakeWallFromCompareTime( GameObject wall ,Vector3 position )
+void MakeWall( GameObject wall ,Vector3 position )
 {
-
-   if (Enemy.skipMove && IsPlayerInRange )
+    Vector3 newPos = new Vector3 (Mathf.Round(position.x) ,Mathf.Round(position.y+1),0 );
+        
+       
+     
+       foreach (GameObject i in GameManager.nutrient)
+        {
+          if(i.transform.position == newPos )
+           {
+             newPos.x+=1;
+           }
+       }
+   if (  IsPlayerInRange && (Mathf.Round(position.y+1) < 7 ) && Enemy.skipMove )
         { 
-           
-          Instantiate(wall,  new Vector3 (position.x +=1 ,position.y,position.z)  , Quaternion.identity);
+     
+          GameObject instantiate = Instantiate(wall,newPos, Quaternion.identity);
             
+            GameManager.wall.Add(instantiate);
+              
         }
-  }
+}
 GameObject choiceWall ()
 {
   GameObject gameManager = GameObject.Find("GameManager");
@@ -39,37 +55,41 @@ GameObject choiceWall ()
  return tileChoice;
 }
  
-void ComparePosition(Vector3 position, GameObject[] currentObj )
+void ComparePosition(Vector3 position)
 {
-Vector3 position1 = new Vector3 (position.x +=1 ,position.y,position.z);
-Vector3 position2;
-float dist1;
-float dist2=1;
-
-
-  foreach(GameObject go in currentObj)
-  {
-     dist1 = Vector3.Distance(position1 , go.transform.position);
-
-    if ( go.CompareTag("wall"))
-    {
-       for(int i = 1 ; i<=8 ;i++ )
-       { 
-         position2 = new Vector3 (position.x +=i ,position.y+=1,position.z);
-         dist2 = Vector3.Distance(position2 , go.transform.position);
-     // Debug.Log("dist2" + dist2);
-       
-   if ((dist1 <= 0) && (dist2 <= 0))
+  Vector3 position1;
+  IsPlayerInRange = true;
+ 
+  for(int j = 0 ; j <GameManager.wall.Count ; j++)
+  {   
+     
+    for (int i=0 ; i<=8 ;i++)
    {
-      print ("ifff==");
-    IsPlayerInRange = false;
-    return ;
-}
-}
-   
-
+       position1= new Vector3(i , Mathf.Round(position.y)+1f );
+      
+       float dist = Vector3.Distance(position1,GameManager.wall[j].transform.position);
+       if (Mathf.Round(dist) <= 0)
+       { 
+         IsPlayerInRange = false;
+       return;
+         
+       } 
+   }
+    
   }
-  }
-
  }
-} 
+ 
+
+ void SetWall ()
+ {
+
+ ComparePosition(currentPlayerPosition);
+        GameObject wall = choiceWall();
+        MakeWall( wall ,currentPlayerPosition);
+ } 
+}
+
+
+
+
+

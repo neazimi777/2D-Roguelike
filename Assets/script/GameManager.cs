@@ -12,17 +12,19 @@ public class GameManager : MonoBehaviour
 	public int playerFoodPoints = 100;
     public static GameManager instance = null;
 	[HideInInspector] public bool playersTurn = true;
-	
-	public static GameObject[] currentObj;
+
 	private Text levelText; 
+	private Text timer; 
 	private GameObject levelImage; 
 	private BoardManager boardScript; 
 	private int level = 1; 
 	private List<Enemy> enemies; 
 	private bool enemiesMoving; 
-
+	private float currentTime ; 
+    static public  List<GameObject> wall = new List<GameObject>();
+    static public  List<GameObject> nutrient  = new List<GameObject>();
+                  
 	private bool doingSetup = true;
-
 
 
 
@@ -61,7 +63,7 @@ public class GameManager : MonoBehaviour
 	
 	 static private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
         { 
-	   
+	       
             instance.level++;
        
     
@@ -74,10 +76,9 @@ public class GameManager : MonoBehaviour
 	
 	void InitGame()
 	{
-		
+        
 		doingSetup = true;
-
-		
+	
 		levelImage = GameObject.Find("LevelImage");
 
 		
@@ -88,17 +89,20 @@ public class GameManager : MonoBehaviour
 
 		
 		levelImage.SetActive(true);
-
+  
 	
 		Invoke("HideLevelImage", levelStartDelay);
 
-	
+	  
 		enemies.Clear();
 
 		
 		boardScript.SetupScene(level);
-		
-		currentObj = FindGameObjectsWithTags(new string[] {"Soda","wall","Food","Enemy","Exit"});
+
+      	currentTime  = SetTime(level);
+      wall.AddRange(GameObject.FindGameObjectsWithTag("wall")); 
+      nutrient.AddRange(GameObject.FindGameObjectsWithTag("Food"));
+      nutrient.AddRange(GameObject.FindGameObjectsWithTag("Soda")); 
 		
 	}
 
@@ -115,8 +119,12 @@ public class GameManager : MonoBehaviour
 
 
 	void Update()
-	{
-		
+	{ 
+     
+
+     StartCoroutine( DisplayTime());
+         
+
 		if (playersTurn || enemiesMoving || doingSetup)
 
 			
@@ -124,6 +132,9 @@ public class GameManager : MonoBehaviour
 
 		
 		StartCoroutine(MoveEnemies());
+
+    
+
 	}
 
 	public void AddEnemyToList(Enemy script)
@@ -176,18 +187,47 @@ public class GameManager : MonoBehaviour
 	
 		enemiesMoving = false;
 	}
-	
-	
 
-       
-	GameObject[] FindGameObjectsWithTags(params string[] tags)
-	{
-		var all = new List<GameObject>();
+ int SetTime (int level)
+{
+   int time = 0 ;
+ 
+    if(level <= 5)
+      {  
+        time = level * 10;
+       }
+    else 
+   {
+      time = 60 ; 
+   }
 
-		foreach(string tag in tags)
-		{
-			all.AddRange(GameObject.FindGameObjectsWithTag(tag).ToList());
-		}
-		return all.ToArray();
-	}
+ return time;
 }
+IEnumerator DisplayTime()
+{
+ yield return new WaitForSeconds(levelStartDelay);
+
+  currentTime -=  Time.deltaTime;
+ 
+       if(Mathf.Round(currentTime) == 0)
+          { 
+             
+             GameOver();
+          }
+
+      if ( currentTime<=3)
+       {
+           timer.color = Color.red;
+            
+        }
+       
+      timer = GameObject.Find("Timer").GetComponent<Text>();
+      timer.text = Mathf.Round(currentTime).ToString();
+       
+ 
+}
+
+}
+ 
+     
+	

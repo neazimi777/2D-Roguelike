@@ -39,7 +39,7 @@ public class Enemy : MovingObject
         { 
           
             skipMove = false;
-          // Debug.Log("skipMove"+skipMove);
+          
             return;
 				
         }
@@ -47,7 +47,6 @@ public class Enemy : MovingObject
 		
         base.AttemptMove <T> (xDir, yDir);	
         skipMove = true;
-   // Debug.Log("skipMove"+skipMove);
     }
 		
 		

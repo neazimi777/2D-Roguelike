@@ -29,7 +29,7 @@ public class Player : MovingObject
 		
 		protected override void Start ()
 		{
-		
+		 
 			animator = GetComponent<Animator>();
 			
 			
@@ -45,7 +45,7 @@ public class Player : MovingObject
 		
 		private void OnDisable ()
 		{
-			
+		
 			GameManager.instance.playerFoodPoints = food;
 		}
 		
@@ -155,7 +155,7 @@ public class Player : MovingObject
 		
 		protected override void OnCantMove <T> (T component)
 		{
-			
+		
 			Wall hitWall = component as Wall;
 			
 			
@@ -193,6 +193,7 @@ public class Player : MovingObject
 				
 		
 				other.gameObject.SetActive (false);
+               GameManager.nutrient.Remove(other.gameObject);
 			}
 		
 			else if(other.tag == "Soda")
@@ -206,6 +207,7 @@ public class Player : MovingObject
 				SoundManager.instance.RandomizeSfx (drinkSound1, drinkSound2);
 			
 				other.gameObject.SetActive (false);
+                 GameManager.nutrient.Remove(other.gameObject);
 			}
 		}
 		

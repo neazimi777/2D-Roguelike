@@ -7,7 +7,7 @@ public class Wall : MonoBehaviour
     public AudioClip chopSound1;				
     public AudioClip chopSound2;				
     public Sprite dmgSprite;					
-    public int hp = 3;							
+    public int hp=3;							
 		
 		
     private SpriteRenderer spriteRenderer;		
@@ -22,15 +22,24 @@ public class Wall : MonoBehaviour
 		
    
     public void DamageWall (int loss)
-    {
+    { 
+         
         SoundManager.instance.RandomizeSfx (chopSound1, chopSound2);
 	    
-        spriteRenderer.sprite = dmgSprite;
-        
+   spriteRenderer.sprite = dmgSprite;
+       
         hp -= loss;
         
-        if(hp <= 0)
-           
-            gameObject.SetActive (false);
+     if(hp <= 0)
+        {   
+          
+           gameObject.SetActive (false);
+            GameManager.wall.Remove(gameObject);
+         // foreach (GameObject i in  GameManager.wall)
+           //Debug.Log ("----remove-----" + i);
+
+     // print("*************************************************************");
+        
+        }
     }
 }
