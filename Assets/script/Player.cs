@@ -20,7 +20,9 @@ public class Player : MovingObject
 		public AudioClip gameOverSound;				
 		
 		private Animator animator;					
-		private int food;                          
+		private int food;
+		private Vector2 touchOrigin = -Vector2.one;
+		                          
 #if UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
        
 #endif
