@@ -35,10 +35,7 @@ public class Wall : MonoBehaviour
           
            gameObject.SetActive (false);
             GameManager.wall.Remove(gameObject);
-         // foreach (GameObject i in  GameManager.wall)
-           //Debug.Log ("----remove-----" + i);
-
-     // print("*************************************************************");
+         
         
         }
     }

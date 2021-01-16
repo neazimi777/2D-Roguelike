@@ -17,7 +17,7 @@ void Update()
    
     if(Mathf.Round(currentPlayerPosition.y) != Mathf.Round(lastPlayerPOsition.y))
    {
-        SetWall();
+       SetWall();
    }
 
    lastPlayerPOsition = currentPlayerPosition;
@@ -57,19 +57,22 @@ GameObject choiceWall ()
  
 void ComparePosition(Vector3 position)
 {
+ 
   Vector3 position1;
   IsPlayerInRange = true;
  
   for(int j = 0 ; j <GameManager.wall.Count ; j++)
-  {   
-     
+  {
     for (int i=0 ; i<=8 ;i++)
    {
-       position1= new Vector3(i , Mathf.Round(position.y)+1f );
       
+       position1= new Vector3(i , Mathf.Round(position.y)+1f );
+        
+     
        float dist = Vector3.Distance(position1,GameManager.wall[j].transform.position);
+       
        if (Mathf.Round(dist) <= 0)
-       { 
+       {
          IsPlayerInRange = false;
        return;
          

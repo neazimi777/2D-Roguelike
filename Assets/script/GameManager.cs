@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
 	 [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
 	static public void CallbackInitialization()
 	{
+       
 		SceneManager.sceneLoaded += OnSceneLoaded;
 	    
 	    instance.InitGame();
@@ -65,7 +66,8 @@ public class GameManager : MonoBehaviour
         { 
 	       
             instance.level++;
-       
+             wall.Clear();
+             nutrient.Clear();
     
             instance.InitGame();
            
@@ -100,7 +102,7 @@ public class GameManager : MonoBehaviour
 		boardScript.SetupScene(level);
 
       	currentTime  = SetTime(level);
-      wall.AddRange(GameObject.FindGameObjectsWithTag("wall")); 
+      wall.AddRange(GameObject.FindGameObjectsWithTag("wall"));
       nutrient.AddRange(GameObject.FindGameObjectsWithTag("Food"));
       nutrient.AddRange(GameObject.FindGameObjectsWithTag("Soda")); 
 		
@@ -110,7 +112,7 @@ public class GameManager : MonoBehaviour
 	
 	void HideLevelImage()
 	{
-
+      
 		levelImage.SetActive(false);
 
 		
@@ -147,13 +149,11 @@ public class GameManager : MonoBehaviour
 	
 	public void GameOver()
 	{
-	
-	
 		levelText.text = "After " + level + " days, you starved.";
         
 		
 		levelImage.SetActive(true);
-
+         
 	
 		enabled = false;
 	}
@@ -209,11 +209,11 @@ IEnumerator DisplayTime()
 
   currentTime -=  Time.deltaTime;
  
-       if(Mathf.Round(currentTime) == 0)
+    /*  if(Mathf.Round(currentTime) == 0)
           { 
              
              GameOver();
-          }
+          }*/
 
       if ( currentTime<=3)
        {

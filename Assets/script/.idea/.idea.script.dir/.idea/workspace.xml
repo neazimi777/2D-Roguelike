@@ -11,9 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be05a168-2bfb-42ec-acf1-104f997d8c3a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Scenes/main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.script.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.script.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RandomWall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RandomWall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Wall.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,10 +66,10 @@
       <option value="$PROJECT_DIR$/BoardManager.cs" />
       <option value="$PROJECT_DIR$/Enemy.cs" />
       <option value="$PROJECT_DIR$/MovingObject.cs" />
-      <option value="$PROJECT_DIR$/Wall.cs" />
-      <option value="$PROJECT_DIR$/GameManager.cs" />
-      <option value="$PROJECT_DIR$/RandomWall.cs" />
       <option value="$PROJECT_DIR$/Player.cs" />
+      <option value="$PROJECT_DIR$/Wall.cs" />
+      <option value="$PROJECT_DIR$/RandomWall.cs" />
+      <option value="$PROJECT_DIR$/GameManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lq0LJELbmftyMobQJudkI4S3Kp" />
@@ -144,6 +145,7 @@
       <workItem from="1610486220401" duration="963000" />
       <workItem from="1610518556590" duration="16738000" />
       <workItem from="1610804683522" duration="34000" />
+      <workItem from="1610805295199" duration="6265000" />
     </task>
     <servers />
   </component>
