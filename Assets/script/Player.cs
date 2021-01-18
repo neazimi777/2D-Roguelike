@@ -195,7 +195,7 @@ public class Player : MovingObject
 				
 		
 				other.gameObject.SetActive (false);
-               GameManager.nutrient.Remove(other.gameObject);
+               GameManager.exceptWall.Remove(other.gameObject);
 			}
 		
 			else if(other.tag == "Soda")
@@ -209,13 +209,14 @@ public class Player : MovingObject
 				SoundManager.instance.RandomizeSfx (drinkSound1, drinkSound2);
 			
 				other.gameObject.SetActive (false);
-                 GameManager.nutrient.Remove(other.gameObject);
+                 GameManager.exceptWall.Remove(other.gameObject);
 			}
 		}
 		
 		
 		private void Restart ()
 		{
+          print("restart");
 			
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
 		}

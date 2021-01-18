@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
 	private bool enemiesMoving; 
 	private float currentTime ; 
     static public  List<GameObject> wall = new List<GameObject>();
-    static public  List<GameObject> nutrient  = new List<GameObject>();
+    static public  List<GameObject> exceptWall  = new List<GameObject>();
                   
 	private bool doingSetup = true;
 
@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
 	       
             instance.level++;
              wall.Clear();
-             nutrient.Clear();
+             exceptWall.Clear();
     
             instance.InitGame();
            
@@ -103,8 +103,9 @@ public class GameManager : MonoBehaviour
 
       	currentTime  = SetTime(level);
       wall.AddRange(GameObject.FindGameObjectsWithTag("wall"));
-      nutrient.AddRange(GameObject.FindGameObjectsWithTag("Food"));
-      nutrient.AddRange(GameObject.FindGameObjectsWithTag("Soda")); 
+     exceptWall.AddRange(GameObject.FindGameObjectsWithTag("Food"));
+     exceptWall.AddRange(GameObject.FindGameObjectsWithTag("Soda")); 
+      exceptWall.AddRange(GameObject.FindGameObjectsWithTag("Enemy")); 
 		
 	}
 
@@ -150,12 +151,9 @@ public class GameManager : MonoBehaviour
 	public void GameOver()
 	{
 		levelText.text = "After " + level + " days, you starved.";
-        
-		
 		levelImage.SetActive(true);
          
-	
-		enabled = false;
+		
 	}
 
 	IEnumerator MoveEnemies()
@@ -209,11 +207,11 @@ IEnumerator DisplayTime()
 
   currentTime -=  Time.deltaTime;
  
-    /*  if(Mathf.Round(currentTime) == 0)
+    if(Mathf.Round(currentTime) == 0)
           { 
              
              GameOver();
-          }*/
+          }
 
       if ( currentTime<=3)
        {
@@ -227,6 +225,7 @@ IEnumerator DisplayTime()
  
 }
 
+ 
 }
  
      

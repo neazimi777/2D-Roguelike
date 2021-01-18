@@ -7,17 +7,20 @@ using Random = UnityEngine.Random;
 public class RandomWall : MonoBehaviour
 {
   bool IsPlayerInRange = true;
-  Vector3  currentPlayerPosition;
-  Vector3  lastPlayerPOsition ;
-
- 
+     Vector3  currentPlayerPosition  ;
+     Vector3  lastPlayerPOsition  ; 
+  
 void Update() 
 {
-        currentPlayerPosition = transform.position;
-   
+    
+       currentPlayerPosition = transform.position;
+     
     if(Mathf.Round(currentPlayerPosition.y) != Mathf.Round(lastPlayerPOsition.y))
-   {
+   { 
+     
+      
        SetWall();
+   
    }
 
    lastPlayerPOsition = currentPlayerPosition;
@@ -31,19 +34,19 @@ void MakeWall( GameObject wall ,Vector3 position )
         
        
      
-       foreach (GameObject i in GameManager.nutrient)
+       foreach (GameObject i in GameManager.exceptWall)
         {
           if(i.transform.position == newPos )
            {
              newPos.x+=1;
            }
        }
-   if (  IsPlayerInRange && (Mathf.Round(position.y+1) < 7 ) && Enemy.skipMove )
+   if (  IsPlayerInRange && (Mathf.Round(position.y+1) < 7 )&& Enemy.enemyMove )
         { 
-     
-          GameObject instantiate = Instantiate(wall,newPos, Quaternion.identity);
+         
+         GameObject instantiate = Instantiate(wall,newPos, Quaternion.identity);
             
-            GameManager.wall.Add(instantiate);
+         GameManager.wall.Add(instantiate);
               
         }
 }
@@ -62,15 +65,16 @@ void ComparePosition(Vector3 position)
   IsPlayerInRange = true;
  
   for(int j = 0 ; j <GameManager.wall.Count ; j++)
-  {
+  {  
+  
+    
     for (int i=0 ; i<=8 ;i++)
    {
       
        position1= new Vector3(i , Mathf.Round(position.y)+1f );
-        
-     
-       float dist = Vector3.Distance(position1,GameManager.wall[j].transform.position);
        
+       float dist = Vector3.Distance(position1,GameManager.wall[j].transform.position);
+  
        if (Mathf.Round(dist) <= 0)
        {
          IsPlayerInRange = false;
@@ -78,21 +82,16 @@ void ComparePosition(Vector3 position)
          
        } 
    }
-    
+
   }
  }
  
 
  void SetWall ()
  {
-
+        
  ComparePosition(currentPlayerPosition);
         GameObject wall = choiceWall();
         MakeWall( wall ,currentPlayerPosition);
  } 
 }
-
-
-
-
-

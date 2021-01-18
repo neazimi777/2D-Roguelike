@@ -11,13 +11,13 @@ public class Enemy : MovingObject
 		
     private Animator animator;							
     private Transform target;						
-    public static bool skipMove;							
-		
+     bool skipMove;
+     public static bool enemyMove = false;	
 		
 		
     protected override void Start ()
     {
-			
+	   
         GameManager.instance.AddEnemyToList (this);
 			
 			
@@ -33,18 +33,19 @@ public class Enemy : MovingObject
 		
 		
     protected override void AttemptMove <T> (int xDir, int yDir)
-    {
-			
+    {    
+	    
+			 
         if(skipMove)
-        { 
-          
+        {
+	        
             skipMove = false;
           
             return;
 				
         }
-			
-		
+			 
+		  
         base.AttemptMove <T> (xDir, yDir);	
         skipMove = true;
     }
@@ -53,8 +54,7 @@ public class Enemy : MovingObject
 		
     public void MoveEnemy ()
     {
-       
-			
+	    enemyMove = true;
         int xDir = 0;
         int yDir = 0;
 			
@@ -77,8 +77,8 @@ public class Enemy : MovingObject
 		
     protected override void OnCantMove <T> (T component)
     {
-		
-        Player hitPlayer = component as Player;
+	    
+	    Player hitPlayer = component as Player;
 			
 			
         hitPlayer.LoseFood (playerDamage);
